@@ -1,88 +1,114 @@
-import React, { Component } from 'react'
-import { Dimensions } from 'react-native'
+import React, {
+  Component, type ComponentRef,
+} from 'react'
+import {
+  Dimensions, type StyleProp, type EmitterSubscription,
+} from 'react-native'
 import { Picker } from '@react-native-picker/picker'
 
 import CustomKeyboard from '../CustomKeyboard'
+import { type Option } from '../AbstractSelectInput/AbstractSelectInput'
 
-import propTypes from './types.js'
-import styles from './styles.js'
+import styles from './styles'
 
-class PickerKeyboard extends Component {
-  constructor(props) {
+type Props = {
+  buttonsTextStyle?: StyleProp<Record<string, unknown>>,
+  buttonsViewStyle?: StyleProp<Record<string, unknown>>,
+  cancelKeyText: string,
+  onCancel: () => void,
+  onSubmit: (value: string) => void,
+  onValueChange: (value: string) => void,
+  options: Option[],
+  pickerItemStyle?: StyleProp<Record<string, unknown>>,
+  pickerViewStyle?: StyleProp<Record<string, unknown>>,
+  submitKeyText: string,
+  value: string,
+}
+
+type State = {
+  value: string,
+  visible: boolean,
+  width: number,
+}
+
+class PickerKeyboard extends Component<Props, State> {
+  picker: ComponentRef<typeof Picker<string>> | null
+  dimensionsListener: EmitterSubscription | undefined
+  constructor (props: Props) {
     super(props)
 
     this.picker = null
     this.state = {
       value: props.value,
       visible: false,
-      width: Dimensions.get('window').width
+      width: Dimensions.get('window').width,
     }
   }
 
-  componentDidMount() {
-    Dimensions.addEventListener('change', this.updateDimensions)
+  componentDidMount (): void {
+    this.dimensionsListener = Dimensions.addEventListener('change', this.updateDimensions)
   }
 
-  componentWillUnmount() {
-    Dimensions.removeEventListener('change', this.updateDimensions)
+  componentWillUnmount (): void {
+    this.dimensionsListener?.remove()
   }
 
-  updateDimensions = () => {
+  updateDimensions = (): void => {
     this.setState({
-      width: Dimensions.get('window').width
+      width: Dimensions.get('window').width,
     })
   }
 
-  setPickerRef = component => {
+  setPickerRef = (component: ComponentRef<typeof Picker<string>> | null): void => {
     this.picker = component
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate (prevProps: Props): void {
     const { value } = this.props
     const prevValue = prevProps.value
 
     if (value !== prevValue) {
       this.setState({
-        value
+        value,
       })
     }
   }
 
-  focus() {
+  focus (): void {
     this.setVisible(true)
   }
 
-  onCancelPress = () => {
+  onCancelPress = (): void => {
     const { onCancel } = this.props
 
     this.setVisible(false)
-    onCancel && onCancel()
+    onCancel?.()
   }
 
-  onSubmitPress = () => {
+  onSubmitPress = (): void => {
     const { onSubmit } = this.props
     const { value } = this.state
 
     this.setVisible(false)
-    onSubmit && onSubmit(value)
+    onSubmit?.(value)
   }
 
-  onValueChange = value => {
+  onValueChange = (value: string): void => {
     const { onValueChange } = this.props
-    onValueChange && onValueChange(value)
+    onValueChange?.(value)
 
     this.setState({
-      value: value
+      value,
     })
   }
 
-  setVisible = visible => {
+  setVisible = (visible: boolean): void => {
     this.setState({
-      visible: visible
+      visible,
     })
   }
 
-  render() {
+  render (): JSX.Element {
     const { value, visible, width } = this.state
     const {
       buttonsTextStyle,
@@ -91,7 +117,7 @@ class PickerKeyboard extends Component {
       pickerViewStyle,
       cancelKeyText,
       submitKeyText,
-      options
+      options,
     } = this.props
 
     return (
@@ -104,7 +130,7 @@ class PickerKeyboard extends Component {
         submitKeyText={submitKeyText}
         visible={visible}
       >
-        <Picker
+        <Picker<string>
           ref={this.setPickerRef}
           onValueChange={this.onValueChange}
           selectedValue={value}
@@ -123,7 +149,5 @@ class PickerKeyboard extends Component {
     )
   }
 }
-
-PickerKeyboard.propTypes = propTypes
 
 export default PickerKeyboard

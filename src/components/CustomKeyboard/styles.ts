@@ -4,13 +4,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
   modal: {
     padding: 0,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#F5FCFF'
+    backgroundColor: '#F5FCFF',
   },
   buttonview: {
     padding: 0,
@@ -20,8 +20,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     backgroundColor: '#CCCFD6',
     borderColor: '#CCCFD6',
-    borderTopColor: 'lightgrey'
-  }
+    borderTopColor: 'lightgrey',
+  },
 })
 
 export default styles

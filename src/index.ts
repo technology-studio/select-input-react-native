@@ -1,8 +1,3 @@
-import { Platform } from 'react-native'
+import { SelectInput } from './components/SelectInput'
 
-const SelectInput = Platform.select({
-  ios: () => require('./components/SelectInput.ios'),
-  android: () => require('./components/SelectInput.android'),
-})();
-
-export default SelectInput.default
+export default SelectInput

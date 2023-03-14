@@ -1,33 +1,45 @@
 import React, { Component } from 'react'
-import { Dimensions, Modal, TouchableWithoutFeedback, View } from 'react-native'
+import {
+  Dimensions, Modal, type StyleProp, TouchableWithoutFeedback, View,
+} from 'react-native'
 
 import KeyboardButton from '../KeyboardButton'
 
-import propTypes from './types.js'
-import styles from './styles.js'
+import styles from './styles'
 
-class CustomKeyboard extends Component {
+type Props = {
+  buttonsTextStyle?: StyleProp<Record<string, unknown>>,
+  buttonsViewStyle?: StyleProp<Record<string, unknown>>,
+  cancelKeyText: string,
+  onCancelPress: () => void,
+  onSubmitPress: () => void,
+  submitKeyText: string,
+  visible: boolean,
+  children: JSX.Element | null,
+}
+
+class CustomKeyboard extends Component<Props> {
   state = {
-    width: Dimensions.get('window').width
+    width: Dimensions.get('window').width,
   }
 
-  updateDimensions = () => {
+  updateDimensions = (): void => {
     this.setState({
-      width: Dimensions.get('window').width
+      width: Dimensions.get('window').width,
     })
   }
 
-  onCancelPress = () => {
+  onCancelPress = (): void => {
     const { onCancelPress } = this.props
     onCancelPress()
   }
 
-  onSubmitPress = () => {
+  onSubmitPress = (): void => {
     const { onSubmitPress } = this.props
     onSubmitPress()
   }
 
-  render() {
+  render (): JSX.Element {
     const { width } = this.state
     const {
       buttonsTextStyle,
@@ -35,7 +47,7 @@ class CustomKeyboard extends Component {
       visible,
       cancelKeyText,
       submitKeyText,
-      children
+      children,
     } = this.props
 
     return (
@@ -48,7 +60,7 @@ class CustomKeyboard extends Component {
           'portrait',
           'landscape',
           'landscape-left',
-          'landscape-right'
+          'landscape-right',
         ]}
       >
         <TouchableWithoutFeedback>
@@ -78,7 +90,5 @@ class CustomKeyboard extends Component {
     )
   }
 }
-
-CustomKeyboard.propTypes = propTypes
 
 export default CustomKeyboard

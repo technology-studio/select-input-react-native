@@ -3,12 +3,12 @@ import { StyleSheet } from 'react-native'
 const styles = StyleSheet.create({
   defaultcontainerstyle: {
     flexDirection: 'column',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   defaultlabelstyle: {
     alignSelf: 'center',
-    fontSize: 13
-  }
+    fontSize: 13,
+  },
 })
 
 export default styles
