@@ -1,12 +1,12 @@
 {
-  "name": "@txo/react-native-select-input-ios",
+  "name": "@txo/select-input-react-native",
   "version": "0.0.0",
-  "description": "Technology Studio - React native select input ios",
+  "description": "Technology Studio - Select input react native",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/technology-studio/react-native-select-input-ios.git"
+    "url": "https://github.com/technology-studio/select-input-react-native.git"
   },
   "author": {
     "name": "Technology Studio",
