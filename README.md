@@ -1,5 +1,5 @@
-![npm](https://img.shields.io/npm/v/@txo/react-native-select-input-ios)
-![codecov](https://img.shields.io/codecov/c/github/txo/react-native-select-input-ios)
-# React native select input ios #
+![npm](https://img.shields.io/npm/v/@txo/select-input-react-native)
+![codecov](https://img.shields.io/codecov/c/github/txo/select-input-react-native)
+# Select input react native #
 
-React native select input ios
+Select input react native
