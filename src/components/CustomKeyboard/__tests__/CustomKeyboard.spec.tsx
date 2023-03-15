@@ -42,16 +42,14 @@ describe('CustomKeyboard', () => {
           onSubmitPress={onSubmitPress}
         />,
       )
-      .getInstance()
+      .getInstance() as unknown as CustomKeyboard
 
     test('call onCancelPress prop correctly', () => {
-      // @ts-expect-error -- TODO: fix type
       customKeyboard?.onCancelPress()
       expect(onCancelPress).toHaveBeenCalled()
     })
 
     test('call onSubmitPress prop correctly', () => {
-      // @ts-expect-error -- TODO: fix type
       customKeyboard?.onSubmitPress()
       expect(onSubmitPress).toHaveBeenCalled()
     })

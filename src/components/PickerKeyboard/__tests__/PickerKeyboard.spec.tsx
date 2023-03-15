@@ -1,5 +1,6 @@
+import { type Picker } from '@react-native-picker/picker'
 import React from 'react'
-import renderer, { type ReactTestInstance } from 'react-test-renderer'
+import renderer from 'react-test-renderer'
 
 import PickerKeyboard from '../PickerKeyboard'
 
@@ -36,12 +37,12 @@ describe('PickerKeyboard', () => {
   })
 
   describe('functions', () => {
-    let pickerKeyboard: ReactTestInstance | null = null
+    let pickerKeyboard: PickerKeyboard | null = null
 
     beforeEach(() => {
       pickerKeyboard = renderer
         .create(<PickerKeyboard {...props} />)
-        .getInstance()
+        .getInstance() as unknown as PickerKeyboard
     })
 
     afterEach(() => {
@@ -49,52 +50,40 @@ describe('PickerKeyboard', () => {
     })
 
     test('sets picker ref correctly', () => {
-      // @ts-expect-error -- TODO: fix type
-      pickerKeyboard?.setPickerRef(1)
-      // @ts-expect-error -- TODO: fix type
-      expect(pickerKeyboard?.picker).toBe(1)
+      const component = 1 as unknown as Picker<string>
+      pickerKeyboard?.setPickerRef(component)
+      expect(pickerKeyboard?.picker).toBe(component)
     })
 
     test('updates value correctly', () => {
-      // @ts-expect-error state probably doesn't exist - check
       expect(pickerKeyboard?.state.value).toBe('0')
-      // @ts-expect-error -- TODO: fix type
-      pickerKeyboard?.componentDidUpdate({ value: '1' })
-      // @ts-expect-error state probably doesn't exist - check
+      pickerKeyboard?.componentDidUpdate({
+        ...props,
+        value: '1',
+      })
       expect(pickerKeyboard?.state.value).toBe('0')
     })
 
     test('updates visible state when focussing correctly', () => {
-      // @ts-expect-error state probably doesn't exist - check
       expect(pickerKeyboard?.state.visible).toBe(false)
-      // @ts-expect-error -- TODO: fix type
       pickerKeyboard?.focus()
-      // @ts-expect-error state probably doesn't exist - check
       expect(pickerKeyboard?.state.visible).toBe(true)
     })
 
     test('updates value correctly when value changes', () => {
-      // @ts-expect-error state probably doesn't exist - check
       expect(pickerKeyboard?.state.value).toBe('0')
 
-      // @ts-expect-error -- TODO: fix type
       pickerKeyboard?.onValueChange('1')
-      // @ts-expect-error state probably doesn't exist - check
       expect(pickerKeyboard?.state.value).toBe('1')
     })
 
     test('updates visibily correctly', () => {
-      // @ts-expect-error state probably doesn't exist - check
       expect(pickerKeyboard?.state.visible).toBe(false)
 
-      // @ts-expect-error -- TODO: fix type
       pickerKeyboard?.setVisible(true)
-      // @ts-expect-error state probably doesn't exist - check
       expect(pickerKeyboard?.state.visible).toBe(true)
 
-      // @ts-expect-error -- TODO: fix type
       pickerKeyboard?.setVisible(false)
-      // @ts-expect-error state probably doesn't exist - check
       expect(pickerKeyboard?.state.visible).toBe(false)
     })
   })
@@ -107,23 +96,19 @@ describe('PickerKeyboard', () => {
       .create(
         <PickerKeyboard {...props} onCancel={onCancel} onSubmit={onSubmit} />,
       )
-      .getInstance()
+      .getInstance() as unknown as PickerKeyboard
 
     test('call onCancel prop correctly', () => {
-      // @ts-expect-error -- TODO: fix type
       pickerKeyboard?.onCancelPress()
 
       expect(onCancel).toHaveBeenCalled()
-      // @ts-expect-error state probably doesn't exist - check
       expect(pickerKeyboard?.state.visible).toBe(false)
     })
 
     test('call onSubmit prop correctly', () => {
-      // @ts-expect-error -- TODO: fix type
       pickerKeyboard?.onSubmitPress()
 
       expect(onSubmit).toHaveBeenCalledWith('0')
-      // @ts-expect-error state probably doesn't exist - check
       expect(pickerKeyboard?.state.visible).toBe(false)
     })
   })
