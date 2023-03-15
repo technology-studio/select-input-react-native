@@ -30,10 +30,13 @@ const props = {
 describe('PickerKeyboard', () => {
   describe('rendering', () => {
     // TODO: resolve issue with missing views in snapshot testing
-    // test('renders correctly with given props', () => {
-    //   const pickerKeyboard = renderer.create(<PickerKeyboard {...props} />)
-    //   expect(pickerKeyboard).toMatchSnapshot()
-    // })
+    test('renders correctly with given props', () => {
+      const pickerKeyboard = renderer
+        .create(<PickerKeyboard {...props} />)
+      const pickerKeyboardInstance = pickerKeyboard.getInstance() as unknown as PickerKeyboard
+      pickerKeyboardInstance?.setVisible(true)
+      expect(pickerKeyboard).toMatchSnapshot()
+    })
   })
 
   describe('functions', () => {

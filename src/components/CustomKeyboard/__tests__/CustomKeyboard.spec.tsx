@@ -17,17 +17,16 @@ const props = {
   onCancelPress: jest.fn(),
   onSubmitPress: jest.fn(),
   submitKeyText: 'submitKeyText',
-  visible: false,
+  visible: true,
   children: null,
 }
 
 describe('CustomKeyboard', () => {
   describe('rendering', () => {
-    // TODO: resolve issue with missing views in snapshot testing
-    // test('renders correctly with given props', () => {
-    //   const customKeyboard = renderer.create(<CustomKeyboard {...props} />)
-    //   expect(customKeyboard).toMatchSnapshot()
-    // })
+    test('renders correctly with given props', () => {
+      const customKeyboard = renderer.create(<CustomKeyboard {...props} />)
+      expect(customKeyboard).toMatchSnapshot()
+    })
   })
 
   describe('callbacks', () => {

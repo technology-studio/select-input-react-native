@@ -2,8 +2,27 @@
 
 exports[`KeyboardButton renders correctly with given props 1`] = `
 <View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
   accessible={true}
-  isTVSelectable={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -11,7 +30,7 @@ exports[`KeyboardButton renders correctly with given props 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Object {
+    {
       "opacity": 1,
     }
   }
@@ -19,16 +38,16 @@ exports[`KeyboardButton renders correctly with given props 1`] = `
   <Text
     allowFontScaling={false}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#006BFF",
           "padding": 8,
         },
-        Object {
+        {
           "color": "#ABCDEF",
           "fontSize": 13,
         },
-        Object {
+        {
           "textAlign": "left",
         },
       ]
