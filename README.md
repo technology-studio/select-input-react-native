@@ -3,3 +3,5 @@
 # Select input react native #
 
 Select input react native
+
+### Disclaimer: This package is based on [react-native-select-input-ios](https://github.com/markuswind/react-native-select-input-ios) and rewrote into TypeScript.
