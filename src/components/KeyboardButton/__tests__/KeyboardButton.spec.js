@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import KeyboardButton from '../KeyboardButton'
+import { KeyboardButton } from '../KeyboardButton'
 
 const props = {
   onPress: jest.fn(),
