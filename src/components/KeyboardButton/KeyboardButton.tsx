@@ -4,7 +4,7 @@ import {
   Text, TouchableOpacity,
 } from 'react-native'
 
-import styles from './styles'
+import { styles } from './styles'
 
 type Props = {
   onPress: () => void,
