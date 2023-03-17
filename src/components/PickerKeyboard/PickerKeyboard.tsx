@@ -31,7 +31,7 @@ type State = {
   width: number,
 }
 
-class PickerKeyboard extends Component<Props, State> {
+export class PickerKeyboard extends Component<Props, State> {
   picker: ComponentRef<typeof Picker<string>> | null
   dimensionsListener: EmitterSubscription | undefined
   constructor (props: Props) {
@@ -149,5 +149,3 @@ class PickerKeyboard extends Component<Props, State> {
     )
   }
 }
-
-export default PickerKeyboard
