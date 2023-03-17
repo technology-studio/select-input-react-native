@@ -6,10 +6,10 @@ import {
 } from 'react-native'
 import { Picker } from '@react-native-picker/picker'
 
-import CustomKeyboard from '../CustomKeyboard'
+import { CustomKeyboard } from '../CustomKeyboard'
 import { type Option } from '../AbstractSelectInput/AbstractSelectInput'
 
-import styles from './styles'
+import { styles } from './styles'
 
 type Props = {
   buttonsTextStyle?: StyleProp<Record<string, unknown>>,

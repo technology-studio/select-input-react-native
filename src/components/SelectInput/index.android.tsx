@@ -4,13 +4,13 @@ import {
   View,
 } from 'react-native'
 
-import AbstractSelectInput from '../AbstractSelectInput'
+import { AbstractSelectInput } from '../AbstractSelectInput'
 import {
   type Option,
   type Props as AbstractSelectInputProps,
 } from '../AbstractSelectInput/AbstractSelectInput'
 
-import styles from './styles.android'
+import { styles } from './styles.android'
 
 export type Props = AbstractSelectInputProps & {
   mode?: 'dialog' | 'dropdown',

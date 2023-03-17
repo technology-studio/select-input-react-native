@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import CustomKeyboard from '../CustomKeyboard'
+import { CustomKeyboard } from '../CustomKeyboard'
 
 const props = {
   buttonsViewStyle: {
