@@ -6,7 +6,9 @@
     "outDir": "./lib",
     "rootDir": "./src",
     "paths": {
-    }
+    },
+    "jsx": "react-native",
+    "skipLibCheck": true
   },
   "include": [
     "src"
