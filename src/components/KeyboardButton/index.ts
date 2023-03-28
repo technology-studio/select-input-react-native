@@ -1,1 +1,1 @@
-export { default } from './KeyboardButton'
+export * from './KeyboardButton'

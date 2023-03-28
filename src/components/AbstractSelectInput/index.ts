@@ -1,1 +1,1 @@
-export { default } from './AbstractSelectInput'
+export * from './AbstractSelectInput'

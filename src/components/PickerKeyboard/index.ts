@@ -1,1 +1,1 @@
-export { default } from './PickerKeyboard'
+export * from './PickerKeyboard'

@@ -1,3 +1,3 @@
 import { SelectInput } from './components/SelectInput'
 
-export default SelectInput
+export { SelectInput }

@@ -1,1 +1,1 @@
-export { default } from './CustomKeyboard'
+export * from './CustomKeyboard'

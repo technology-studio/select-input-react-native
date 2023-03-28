@@ -4,14 +4,14 @@ import {
   Text, TouchableWithoutFeedback, View,
 } from 'react-native'
 
-import AbstractSelectInput from '../AbstractSelectInput'
+import { AbstractSelectInput } from '../AbstractSelectInput'
 import {
   type Option,
   type Props as AbstractSelectInputProps,
 } from '../AbstractSelectInput/AbstractSelectInput'
-import PickerKeyboard from '../PickerKeyboard'
+import { PickerKeyboard } from '../PickerKeyboard'
 
-import styles from './styles.ios'
+import { styles } from './styles.ios'
 
 export type Props = AbstractSelectInputProps & {
   buttonsTextStyle?: StyleProp<Record<string, unknown>>,

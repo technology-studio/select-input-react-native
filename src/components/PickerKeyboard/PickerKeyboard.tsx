@@ -6,10 +6,10 @@ import {
 } from 'react-native'
 import { Picker } from '@react-native-picker/picker'
 
-import CustomKeyboard from '../CustomKeyboard'
+import { CustomKeyboard } from '../CustomKeyboard'
 import { type Option } from '../AbstractSelectInput/AbstractSelectInput'
 
-import styles from './styles'
+import { styles } from './styles'
 
 type Props = {
   buttonsTextStyle?: StyleProp<Record<string, unknown>>,
@@ -31,7 +31,7 @@ type State = {
   width: number,
 }
 
-class PickerKeyboard extends Component<Props, State> {
+export class PickerKeyboard extends Component<Props, State> {
   picker: ComponentRef<typeof Picker<string>> | null
   dimensionsListener: EmitterSubscription | undefined
   constructor (props: Props) {
@@ -149,5 +149,3 @@ class PickerKeyboard extends Component<Props, State> {
     )
   }
 }
-
-export default PickerKeyboard

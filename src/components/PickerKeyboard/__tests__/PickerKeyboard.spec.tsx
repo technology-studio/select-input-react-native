@@ -2,7 +2,7 @@ import { type Picker } from '@react-native-picker/picker'
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import PickerKeyboard from '../PickerKeyboard'
+import { PickerKeyboard } from '../PickerKeyboard'
 
 const props = {
   buttonsTextStyle: {
@@ -29,7 +29,6 @@ const props = {
 
 describe('PickerKeyboard', () => {
   describe('rendering', () => {
-    // TODO: resolve issue with missing views in snapshot testing
     test('renders correctly with given props', () => {
       const pickerKeyboard = renderer
         .create(<PickerKeyboard {...props} />)

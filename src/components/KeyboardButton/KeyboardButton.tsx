@@ -4,7 +4,7 @@ import {
   Text, TouchableOpacity,
 } from 'react-native'
 
-import styles from './styles'
+import { styles } from './styles'
 
 type Props = {
   onPress: () => void,
@@ -13,7 +13,7 @@ type Props = {
   textStyle?: StyleProp<Record<string, unknown>>,
 }
 
-class KeyboardButton extends Component<Props> {
+export class KeyboardButton extends Component<Props> {
   render (): JSX.Element {
     const { onPress, text, textAlign, textStyle } = this.props
 
@@ -29,5 +29,3 @@ class KeyboardButton extends Component<Props> {
     )
   }
 }
-
-export default KeyboardButton

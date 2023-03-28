@@ -19,7 +19,7 @@ type State = {
   selectedValue: string,
 }
 
-class AbstractSelectInput<PROPS extends Props> extends Component<PROPS, State> {
+export class AbstractSelectInput<PROPS extends Props> extends Component<PROPS, State> {
   constructor (props: PROPS) {
     super(props)
 
@@ -77,5 +77,3 @@ class AbstractSelectInput<PROPS extends Props> extends Component<PROPS, State> {
     )
   }
 }
-
-export default AbstractSelectInput

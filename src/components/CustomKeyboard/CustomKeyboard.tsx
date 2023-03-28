@@ -3,9 +3,9 @@ import {
   Dimensions, Modal, type StyleProp, TouchableWithoutFeedback, View,
 } from 'react-native'
 
-import KeyboardButton from '../KeyboardButton'
+import { KeyboardButton } from '../KeyboardButton'
 
-import styles from './styles'
+import { styles } from './styles'
 
 type Props = {
   buttonsTextStyle?: StyleProp<Record<string, unknown>>,
@@ -18,7 +18,7 @@ type Props = {
   children: JSX.Element | null,
 }
 
-class CustomKeyboard extends Component<Props> {
+export class CustomKeyboard extends Component<Props> {
   state = {
     width: Dimensions.get('window').width,
   }
@@ -90,5 +90,3 @@ class CustomKeyboard extends Component<Props> {
     )
   }
 }
-
-export default CustomKeyboard
