@@ -11,14 +11,14 @@ const props = {
   },
   buttonsTextStyle: {
     color: '#CCCCCC',
-    fontSize: 13
+    fontSize: 13,
   },
   cancelKeyText: 'cancelKeyText',
   onCancelPress: jest.fn(),
   onSubmitPress: jest.fn(),
   submitKeyText: 'submitKeyText',
-  visible: false,
-  children: null
+  visible: true,
+  children: null,
 }
 
 describe('CustomKeyboard', () => {
@@ -39,18 +39,18 @@ describe('CustomKeyboard', () => {
           {...props}
           onCancelPress={onCancelPress}
           onSubmitPress={onSubmitPress}
-        />
+        />,
       )
-      .getInstance()
+      .getInstance() as unknown as CustomKeyboard
 
     test('call onCancelPress prop correctly', () => {
-      customKeyboard.onCancelPress()
-      expect(onCancelPress).toBeCalled()
+      customKeyboard?.onCancelPress()
+      expect(onCancelPress).toHaveBeenCalled()
     })
 
     test('call onSubmitPress prop correctly', () => {
-      customKeyboard.onSubmitPress()
-      expect(onSubmitPress).toBeCalled()
+      customKeyboard?.onSubmitPress()
+      expect(onSubmitPress).toHaveBeenCalled()
     })
   })
 })

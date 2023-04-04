@@ -9,28 +9,22 @@ const { compilerOptions } = require('./tsconfig.json');
 
 const { defaults } = require('jest-config');
 
+/** @type {import('ts-jest').JestConfigWithTsJest} */
 module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'node',
+  preset: 'react-native',
   testMatch: [
-    '<rootDir>/__tests__/Tests/**/?(*.)(spec|test).ts'
-  ],
-  transformIgnorePatterns: [
-    '/node_modules/(?!@txo).+\\.js$'
+    '<rootDir>/__tests__/Tests/**/?(*.)(spec|test).ts',
+    '<rootDir>/src/components/**/__tests__/?(*.)(spec|test).(ts|tsx)'
   ],
   testPathIgnorePatterns: [
     '/node_modules/'
   ],
   setupFiles: [
-    '<rootDir>/__tests__/Setup.ts'
+    '<rootDir>/__tests__/Setup.ts',
   ],
   moduleFileExtensions: [
     ...defaults.moduleFileExtensions,
   ],
-  transform: {
-    '^.+\\.tsx?$': ['ts-jest', {
-      tsconfig: './tsconfig.json'
-    }]
-  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths , { prefix: '<rootDir>/' } ),
 }

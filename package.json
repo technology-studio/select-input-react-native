@@ -83,6 +83,7 @@
     "typescript": "^5.0.3"
   },
   "peerDependencies": {
+    "react": "*",
     "react-native": "*"
   },
   "config": {

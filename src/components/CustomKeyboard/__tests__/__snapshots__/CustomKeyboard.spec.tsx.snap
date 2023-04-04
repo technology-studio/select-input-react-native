@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PickerKeyboard rendering renders correctly with given props 1`] = `
+exports[`CustomKeyboard rendering renders correctly with given props 1`] = `
 <Modal
   animationType="slide"
   hardwareAccelerated={false}
   onOrientationChange={[Function]}
   supportedOrientations={
-    Array [
+    [
       "portrait",
       "landscape",
       "landscape-left",
@@ -14,10 +14,21 @@ exports[`PickerKeyboard rendering renders correctly with given props 1`] = `
     ]
   }
   transparent={true}
-  visible={false}
+  visible={true}
 >
   <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
     accessible={true}
+    focusable={false}
+    onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -25,7 +36,7 @@ exports[`PickerKeyboard rendering renders correctly with given props 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignItems": "center",
         "flex": 1,
         "justifyContent": "flex-end",
@@ -34,14 +45,14 @@ exports[`PickerKeyboard rendering renders correctly with given props 1`] = `
   >
     <View
       style={
-        Array [
-          Object {
+        [
+          {
             "alignItems": "center",
             "backgroundColor": "#F5FCFF",
             "justifyContent": "center",
             "padding": 0,
           },
-          Object {
+          {
             "width": 750,
           },
         ]
@@ -49,8 +60,8 @@ exports[`PickerKeyboard rendering renders correctly with given props 1`] = `
     >
       <View
         style={
-          Array [
-            Object {
+          [
+            {
               "backgroundColor": "#CCCFD6",
               "borderBottomWidth": 0,
               "borderColor": "#CCCFD6",
@@ -60,16 +71,39 @@ exports[`PickerKeyboard rendering renders correctly with given props 1`] = `
               "justifyContent": "space-between",
               "padding": 0,
             },
-            undefined,
-            Object {
+            {
+              "backgroundColor": "#AAAAAA",
+              "borderBottomWidth": 1,
+              "borderColor": "#BBBBBB",
+            },
+            {
               "width": 750,
             },
           ]
         }
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
-          isTVSelectable={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -77,7 +111,7 @@ exports[`PickerKeyboard rendering renders correctly with given props 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "opacity": 1,
             }
           }
@@ -85,16 +119,16 @@ exports[`PickerKeyboard rendering renders correctly with given props 1`] = `
           <Text
             allowFontScaling={false}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#006BFF",
                   "padding": 8,
                 },
-                Object {
-                  "color": "#BBBBBB",
+                {
+                  "color": "#CCCCCC",
                   "fontSize": 13,
                 },
-                Object {
+                {
                   "textAlign": "left",
                 },
               ]
@@ -104,8 +138,27 @@ exports[`PickerKeyboard rendering renders correctly with given props 1`] = `
           </Text>
         </View>
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
-          isTVSelectable={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -113,7 +166,7 @@ exports[`PickerKeyboard rendering renders correctly with given props 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "opacity": 1,
             }
           }
@@ -121,16 +174,16 @@ exports[`PickerKeyboard rendering renders correctly with given props 1`] = `
           <Text
             allowFontScaling={false}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#006BFF",
                   "padding": 8,
                 },
-                Object {
-                  "color": "#BBBBBB",
+                {
+                  "color": "#CCCCCC",
                   "fontSize": 13,
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
               ]
@@ -140,47 +193,7 @@ exports[`PickerKeyboard rendering renders correctly with given props 1`] = `
           </Text>
         </View>
       </View>
-      <View>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#FFFFFF",
-              },
-              Object {
-                "backgroundColor": "#CCCCCC",
-              },
-              Object {
-                "width": 750,
-              },
-            ]
-          }
-        >
-          <RCTPicker
-            items={
-              Array [
-                Object {
-                  "label": "0",
-                  "textColor": undefined,
-                  "value": 0,
-                },
-              ]
-            }
-            onChange={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            selectedIndex={0}
-            style={
-              Array [
-                Object {
-                  "height": 216,
-                },
-                undefined,
-              ]
-            }
-          />
-        </View>
-      </View>
+      <View />
     </View>
   </View>
 </Modal>

@@ -6,11 +6,11 @@ import { KeyboardButton } from '../KeyboardButton'
 const props = {
   onPress: jest.fn(),
   text: 'buttonText',
-  textAlign: 'left',
+  textAlign: 'left' as const,
   textStyle: {
     color: '#ABCDEF',
-    fontSize: 13
-  }
+    fontSize: 13,
+  },
 }
 
 describe('KeyboardButton', () => {
