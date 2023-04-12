@@ -37,7 +37,7 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "@react-native-picker/picker": "^2.4.9"
+    "@react-native-picker/picker": "^2.4.10"
   },
   "devDependencies": {
     "@babel/core": "^7.21.4",
