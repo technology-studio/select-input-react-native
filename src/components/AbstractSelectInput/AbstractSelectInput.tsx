@@ -63,9 +63,7 @@ export class AbstractSelectInput<PROPS extends Props> extends Component<PROPS, S
 
   getValueLabel = (): (string | undefined)[] => {
     const { options, value } = this.props
-    const valueOptions = (options != null)
-      ? options
-      : [{ value: '', label: '' }]
+    const valueOptions = options ?? [{ value: '', label: '' }]
 
     return (
       valueOptions.map(function (option) {
