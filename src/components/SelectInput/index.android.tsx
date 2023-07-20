@@ -6,6 +6,7 @@ import {
 
 import { AbstractSelectInput } from '../AbstractSelectInput'
 import {
+  type Option,
   type Props as AbstractSelectInputProps,
 } from '../AbstractSelectInput/AbstractSelectInput'
 
@@ -34,11 +35,11 @@ export class SelectInput extends AbstractSelectInput<Props> {
         <Picker
           enabled={enabled}
           onValueChange={this.onSubmit}
-          style={labelStyle ?? styles.defaultlabelstyle}
+          style={(labelStyle != null) ? labelStyle : styles.defaultlabelstyle}
           selectedValue={selectedValue}
           mode={mode}
         >
-          {(options).map(option => (
+          {(options as Option[]).map(option => (
             <Picker.Item
               key={option.value}
               value={option.value}
