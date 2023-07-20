@@ -11,7 +11,7 @@ export type Props = {
   onEndEditing?: () => void,
   onSubmitEditing?: (value: string) => void,
   onValueChange?: (value: string) => void,
-  options?: Option[],
+  options: Option[],
   value: string,
 }
 
@@ -63,12 +63,9 @@ export class AbstractSelectInput<PROPS extends Props> extends Component<PROPS, S
 
   getValueLabel = (): (string | undefined)[] => {
     const { options, value } = this.props
-    const valueOptions = (options != null)
-      ? options
-      : [{ value: '', label: '' }]
 
     return (
-      valueOptions.map(function (option) {
+      options.map(function (option) {
         if (option.value === value) {
           return option.label
         }
