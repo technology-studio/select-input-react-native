@@ -6,7 +6,6 @@ import {
 
 import { AbstractSelectInput } from '../AbstractSelectInput'
 import {
-  type Option,
   type Props as AbstractSelectInputProps,
 } from '../AbstractSelectInput/AbstractSelectInput'
 import { PickerKeyboard } from '../PickerKeyboard'
@@ -53,7 +52,8 @@ export class SelectInput extends AbstractSelectInput<Props> {
     const { enabled, onBeginEditing } = this.props
     const pickerKeyboard = this.pickerKeyboard
 
-    if (enabled as boolean) {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    if (enabled!) {
       pickerKeyboard?.focus()
       onBeginEditing?.()
     }
@@ -77,7 +77,7 @@ export class SelectInput extends AbstractSelectInput<Props> {
       <TouchableWithoutFeedback onPress={this.focus}>
         <View style={style}>
           <Text
-            style={(labelStyle != null) ? labelStyle : styles.defaultlabelstyle}
+            style={labelStyle ?? styles.defaultlabelstyle}
             adjustsFontSizeToFit={true}
             allowFontScaling={false}
             numberOfLines={1}
@@ -87,7 +87,8 @@ export class SelectInput extends AbstractSelectInput<Props> {
 
           <PickerKeyboard
             ref={this.setPickerKeyboardRef}
-            options={options as Option[]}
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            options={options!}
             value={value}
             onCancel={this.onCancel}
             onSubmit={this.onSubmit}
