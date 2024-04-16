@@ -1,9 +1,9 @@
 import React from 'react'
 import { Picker } from '@react-native-picker/picker'
 import {
-  StyleProp,
+  type StyleProp,
   View,
-  ViewStyle,
+  type ViewStyle,
 } from 'react-native'
 
 import { AbstractSelectInput } from '../AbstractSelectInput'
