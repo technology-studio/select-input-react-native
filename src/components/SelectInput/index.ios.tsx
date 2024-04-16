@@ -1,7 +1,9 @@
 import React, { type ComponentRef } from 'react'
 import {
-  type StyleProp,
   Text, TouchableWithoutFeedback, View,
+  type TextStyle,
+  type ViewStyle,
+  type StyleProp,
 } from 'react-native'
 
 import { AbstractSelectInput } from '../AbstractSelectInput'
@@ -13,13 +15,13 @@ import { PickerKeyboard } from '../PickerKeyboard'
 import { styles } from './styles.ios'
 
 export type Props = AbstractSelectInputProps & {
-  buttonsTextStyle?: StyleProp<Record<string, unknown>>,
-  buttonsViewStyle?: StyleProp<Record<string, unknown>>,
+  buttonsTextStyle?: StyleProp<TextStyle>,
+  buttonsViewStyle?: StyleProp<ViewStyle>,
   cancelKeyText: string,
-  labelStyle?: StyleProp<Record<string, unknown>>,
-  pickerItemStyle?: StyleProp<Record<string, unknown>>,
-  pickerViewStyle?: StyleProp<Record<string, unknown>>,
-  style?: StyleProp<Record<string, unknown>>,
+  labelStyle?: StyleProp<TextStyle>,
+  pickerItemStyle?: StyleProp<ViewStyle>,
+  pickerViewStyle?: StyleProp<ViewStyle>,
+  style?: StyleProp<ViewStyle>,
   submitKeyText: string,
 }
 

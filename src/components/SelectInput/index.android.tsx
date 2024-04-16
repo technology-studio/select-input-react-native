@@ -1,7 +1,9 @@
 import React from 'react'
 import { Picker } from '@react-native-picker/picker'
 import {
+  StyleProp,
   View,
+  ViewStyle,
 } from 'react-native'
 
 import { AbstractSelectInput } from '../AbstractSelectInput'
@@ -13,8 +15,8 @@ import { styles } from './styles.android'
 
 export type Props = AbstractSelectInputProps & {
   mode?: 'dialog' | 'dropdown',
-  labelStyle?: Record<string, unknown>,
-  style?: Record<string, unknown>,
+  labelStyle?: StyleProp<ViewStyle>,
+  style?: StyleProp<ViewStyle>,
 }
 
 export class SelectInput extends AbstractSelectInput<Props> {
