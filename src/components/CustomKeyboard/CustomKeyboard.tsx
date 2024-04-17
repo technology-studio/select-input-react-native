@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import {
   Dimensions, Modal, type StyleProp, TouchableWithoutFeedback, View,
+  type TextStyle,
+  type ViewStyle,
 } from 'react-native'
 
 import { KeyboardButton } from '../KeyboardButton'
@@ -8,8 +10,8 @@ import { KeyboardButton } from '../KeyboardButton'
 import { styles } from './styles'
 
 type Props = {
-  buttonsTextStyle?: StyleProp<Record<string, unknown>>,
-  buttonsViewStyle?: StyleProp<Record<string, unknown>>,
+  buttonsTextStyle?: StyleProp<TextStyle>,
+  buttonsViewStyle?: StyleProp<ViewStyle>,
   cancelKeyText: string,
   onCancelPress: () => void,
   onSubmitPress: () => void,
