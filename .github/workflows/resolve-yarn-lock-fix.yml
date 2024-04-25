@@ -1,11 +1,11 @@
-name: Resolve yarn.lock
+name: Resolve yarn.lock (test fix)
 
 on:
   issue_comment:
     types: [created]
 
 jobs:
-  resolve-yarn-lock-on-comment:
+  resolve-yarn-lock-on-comment-fix:
     name: '/'
     if: contains(github.event.comment.body, '/resolve-test yarn.lock')
     secrets: inherit
