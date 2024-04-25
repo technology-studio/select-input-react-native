@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {
   type StyleProp,
   Text, TouchableOpacity,
+  type TextStyle,
 } from 'react-native'
 
 import { styles } from './styles'
@@ -10,7 +11,7 @@ type Props = {
   onPress: () => void,
   text: string,
   textAlign: 'center' | 'left' | 'right',
-  textStyle?: StyleProp<Record<string, unknown>>,
+  textStyle?: StyleProp<TextStyle>,
 }
 
 export class KeyboardButton extends Component<Props> {
