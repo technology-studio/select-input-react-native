@@ -9,9 +9,9 @@ jobs:
     name: '/'
     if: contains(github.event.comment.body, '/resolve-test yarn.lock')
     secrets: inherit
-    with:
-      pr_number: ${{ github.event.issue.number }}
-      repo: ${{ github.repository }}
+    # with:
+    #   pr_number: ${{ github.event.issue.number }}
+    #   repo: ${{ github.repository }}
     runs-on: ubuntu-latest
     steps:
       - uses: navikt/github-app-token-generator@a3831f44404199df32d8f39f7c0ad9bb8fa18b1c # v1
@@ -26,8 +26,8 @@ jobs:
 
       - name: Get PR branch names
         env:
-          REPO: ${{ inputs.repo }}
-          PR_NO: ${{ inputs.pr_number }}
+          REPO: ${{ github.repository }}
+          PR_NO: ${{ github.event.issue.number }}
           GH_TOKEN: ${{ github.token }}
         run: |
           echo "HEAD_BRANCH=$(gh pr view $PR_NO --repo $REPO --json headRefName --jq '.headRefName')" >> $GITHUB_ENV
