@@ -3,6 +3,8 @@ import React, {
 } from 'react'
 import {
   Dimensions, type StyleProp, type EmitterSubscription,
+  type TextStyle,
+  type ViewStyle,
 } from 'react-native'
 import { Picker } from '@react-native-picker/picker'
 
@@ -12,15 +14,15 @@ import { type Option } from '../AbstractSelectInput/AbstractSelectInput'
 import { styles } from './styles'
 
 type Props = {
-  buttonsTextStyle?: StyleProp<Record<string, unknown>>,
-  buttonsViewStyle?: StyleProp<Record<string, unknown>>,
+  buttonsTextStyle?: StyleProp<TextStyle>,
+  buttonsViewStyle?: StyleProp<ViewStyle>,
   cancelKeyText: string,
   onCancel: () => void,
   onSubmit: (value: string) => void,
   onValueChange: (value: string) => void,
   options: Option[],
-  pickerItemStyle?: StyleProp<Record<string, unknown>>,
-  pickerViewStyle?: StyleProp<Record<string, unknown>>,
+  pickerItemStyle?: StyleProp<ViewStyle>,
+  pickerViewStyle?: StyleProp<ViewStyle>,
   submitKeyText: string,
   value: string,
 }

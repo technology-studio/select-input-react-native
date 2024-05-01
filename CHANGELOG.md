@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/technology-studio/select-input-react-native/compare/v1.0.8...v1.0.9) (2024-04-30)
+
+
+### Bug fixes
+
+* update types for style props ([#466](https://github.com/technology-studio/select-input-react-native/issues/466)) ([1e4ad46](https://github.com/technology-studio/select-input-react-native/commit/1e4ad4670f607f3477eafb8fa4ae0fc0ebf0ba6e))
+
 ## [1.0.8](https://github.com/technology-studio/select-input-react-native/compare/v1.0.7...v1.0.8) (2024-04-10)
 
 
