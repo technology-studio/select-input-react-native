@@ -1,3 +1,15 @@
+## [1.0.12](https://github.com/technology-studio/select-input-react-native/compare/v1.0.11...v1.0.12) (2024-08-29)
+
+
+### CI
+
+* add lint command for CI ([#541](https://github.com/technology-studio/select-input-react-native/issues/541)) ([208b1da](https://github.com/technology-studio/select-input-react-native/commit/208b1da19848d11d3c88a9ebe8d59c58dbdc4923))
+
+
+### Bug fixes
+
+* **deps:** update dependency @react-native-picker/picker to ^2.8.0 ([4aa75c0](https://github.com/technology-studio/select-input-react-native/commit/4aa75c026dbc8859f9abe7a7cc2918c45ada50c9))
+
 ## [1.0.11](https://github.com/technology-studio/select-input-react-native/compare/v1.0.10...v1.0.11) (2024-06-10)
 
 
