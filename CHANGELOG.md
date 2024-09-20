@@ -1,3 +1,16 @@
+## [1.0.13](https://github.com/technology-studio/select-input-react-native/compare/v1.0.12...v1.0.13) (2024-09-20)
+
+
+### CI
+
+* rename workflows ([#561](https://github.com/technology-studio/select-input-react-native/issues/561)) ([2e7fa27](https://github.com/technology-studio/select-input-react-native/commit/2e7fa27194b8f7f7b9f8d85a7c041dfb582db507))
+* update URL for code-quality ([#552](https://github.com/technology-studio/select-input-react-native/issues/552)) ([2a5a6fe](https://github.com/technology-studio/select-input-react-native/commit/2a5a6fed8179973dca51f88c92875f75e00858d3))
+
+
+### Bug fixes
+
+* **deps:** update dependency @react-native-picker/picker to ^2.8.1 ([bc9320e](https://github.com/technology-studio/select-input-react-native/commit/bc9320e59803f1545ebbc0526101bbfe1c575d28))
+
 ## [1.0.12](https://github.com/technology-studio/select-input-react-native/compare/v1.0.11...v1.0.12) (2024-08-29)
 
 
