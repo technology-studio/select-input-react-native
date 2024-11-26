@@ -1,3 +1,16 @@
+## [1.0.15](https://github.com/technology-studio/select-input-react-native/compare/v1.0.14...v1.0.15) (2024-11-26)
+
+
+### CI
+
+* add synchronize to PR workflow ([#611](https://github.com/technology-studio/select-input-react-native/issues/611)) ([b328810](https://github.com/technology-studio/select-input-react-native/commit/b3288107f27fb399095ef35ef896b018aaae0f9e))
+* update pr and release workflows ([#609](https://github.com/technology-studio/select-input-react-native/issues/609)) ([013fad9](https://github.com/technology-studio/select-input-react-native/commit/013fad9fc19a2ba1a35a58a7c69ee055bf9027e4))
+
+
+### Bug fixes
+
+* **deps:** update dependency @react-native-picker/picker to ^2.9.1 ([#619](https://github.com/technology-studio/select-input-react-native/issues/619)) ([115ebce](https://github.com/technology-studio/select-input-react-native/commit/115ebceeda1a2b7461dd27ead4719cf3d8a74d65))
+
 ## [1.0.14](https://github.com/technology-studio/select-input-react-native/compare/v1.0.13...v1.0.14) (2024-10-24)
 
 
