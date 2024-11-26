@@ -1873,10 +1873,10 @@
     "@pnpm/network.ca-file" "^1.0.1"
     config-chain "^1.1.11"
 
-"@react-native-picker/picker@^2.9.0":
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@react-native-picker/picker/-/picker-2.9.0.tgz#0a7053ca174ec697388cb79032fb4c1445554e07"
-  integrity sha512-khEhIW/uhfMqq/+tvg4rEAiPGT8GX+Y6QydlP2TSMSmRHoSJK+ShXvXZXSr4Sii4imkj4BwvLunGywwtQDODqg==
+"@react-native-picker/picker@^2.9.1":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@react-native-picker/picker/-/picker-2.9.1.tgz#7c51ab168c21645aa151e8af34a788dbd83c3b26"
+  integrity sha512-p7BuPbOt3yfn+hflamaYVsdICjilATtzbY/M+6LCWY88a7xgWn7EcDGVWkn3rB0UdvgZ0OkyGmPP1GRGBg02Fw==
 
 "@react-native/assets-registry@0.76.3":
   version "0.76.3"
