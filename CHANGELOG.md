@@ -1,3 +1,10 @@
+## [1.0.18](https://github.com/technology-studio/select-input-react-native/compare/v1.0.17...v1.0.18) (2024-12-03)
+
+
+### Bug fixes
+
+* **deps:** update dependency @react-native-picker/picker to ^2.10.2 ([#623](https://github.com/technology-studio/select-input-react-native/issues/623)) ([aaf0275](https://github.com/technology-studio/select-input-react-native/commit/aaf0275433b6ef11dfc6a33e8a17f0139841c9cc))
+
 ## [1.0.17](https://github.com/technology-studio/select-input-react-native/compare/v1.0.16...v1.0.17) (2024-11-28)
 
 
