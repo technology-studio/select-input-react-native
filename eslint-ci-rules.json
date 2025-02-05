@@ -1,0 +1,11 @@
+[
+  "@stylistic/space-before-function-paren",
+  "@typescript-eslint/prefer-destructuring",
+  "@typescript-eslint/class-methods-use-this",
+  "@stylistic/jsx-curly-brace-presence",
+  "@typescript-eslint/no-magic-numbers",
+  "@typescript-eslint/no-import-type-side-effects",
+  "@typescript-eslint/no-unnecessary-condition",
+  "eslint-comments/require-description",
+  "@typescript-eslint/no-unsafe-type-assertion"
+]

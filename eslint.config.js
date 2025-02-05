@@ -1,14 +1,12 @@
-const txoConfig = require('eslint-config-txo-typescript-react')
-
-/** @type {import('eslint').Linter.FlatConfig[]} */
-const config = [
-  ...txoConfig.default,
-  {
-    ignores: [
-      'babel.config.js',
-      'src/components/**/*.spec.*',
-    ],
-  },
-]
-
-module.exports = config
+module.exports = (async function config() {
+  const txoPackageConfigList = await import('eslint-config-txo-package-react')
+  return [
+    ...txoPackageConfigList.configList,
+    {
+      ignores: [
+        'babel.config.js',
+        'src/components/**/*.spec.*',
+      ],
+    },
+  ]
+})()
