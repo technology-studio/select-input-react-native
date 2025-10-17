@@ -1,3 +1,15 @@
+## [1.0.22](https://github.com/technology-studio/select-input-react-native/compare/v1.0.21...v1.0.22) (2025-10-17)
+
+
+### CI
+
+* add pr.yml permissions ([#719](https://github.com/technology-studio/select-input-react-native/issues/719)) ([d66d6e8](https://github.com/technology-studio/select-input-react-native/commit/d66d6e84c338640ce359f2dc2764e3510db3a274))
+
+
+### Bug fixes
+
+* **deps:** update dependency @react-native-picker/picker to ^2.11.3 ([#729](https://github.com/technology-studio/select-input-react-native/issues/729)) ([332533d](https://github.com/technology-studio/select-input-react-native/commit/332533dd258b7d0bf3e26c0080b632278c8da9d7))
+
 ## [1.0.21](https://github.com/technology-studio/select-input-react-native/compare/v1.0.20...v1.0.21) (2025-09-14)
 
 
