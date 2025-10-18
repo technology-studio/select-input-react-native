@@ -1,6 +1,6 @@
 {
   "name": "@txo/select-input-react-native",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "Technology Studio - Select input react native",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
